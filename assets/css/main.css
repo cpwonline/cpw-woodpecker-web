@@ -1,9 +1,58 @@
+@import url("fontawesome-v5.9.0.min.css");
+
+@font-face {
+    font-family: "SourceSansPro-Regular";
+    src: url("../fonts/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+    font-family: "SourceSansPro-Bold";
+    src: url("../fonts/SourceSansPro-Bold.ttf");
+}
+
+@font-face {
+    font-family: "SourceSansPro-Light";
+    src: url("../fonts/SourceSansPro-Light.ttf");
+}
+
 *{
 	padding: 0;
 	margin: 0;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "SourceSansPro-Regular", sans-serif;
+}
+
+#cpw-woodpecker{
+	background:#e2e2e2;
+}
+
+#cpw-woodpecker h1,
+#cpw-woodpecker h2,
+#cpw-woodpecker h3,
+#cpw-woodpecker h4,
+#cpw-woodpecker h5,
+#cpw-woodpecker h6{
+	font-family: "SourceSansPro-Bold", sans-serif;
 }
 
 #cpw-woodpecker #sidebar #menu a i{
 	width: 1cm;
+}
+
+#cpw-woodpecker .color-base{
+	background: #00cb76;
+}
+#cpw-woodpecker .color-base-text{
+	color: #00cb76;
+}
+
+#cpw-woodpecker .tab-bar{
+	padding-top: .5cm;
+	background: #fff;
+}
+
+#cpw-woodpecker .tab-bar a{
+	display: inline-block;
+	text-decoration: none;
+	margin: 0;
+	float: left;
 }
