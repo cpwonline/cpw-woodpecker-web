@@ -4,425 +4,428 @@
 		<title>CPW Woodpecker</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+
 		<!-- CSS Links -->
-			<link rel="stylesheet" href="../../assets/css/libraries/w3css-v4.15.css">
+			<!-- Libraries -->
+				<link rel="stylesheet" href="../../assets/css/libraries/fontawesome-v5.9.0.min.css">
+				<link rel="stylesheet" href="../../assets/css/libraries/bootstrap-v5.1.1/bootstrap.min.css">
+
 			<link rel="stylesheet" href="../../assets/css/main.css">
-			<link rel="stylesheet" href="../../assets/css/libraries/fontawesome-v5.9.0.min.css">
 		<!-- /CSS Links -->
 	</head>
-	<body id="cpw-woodpecker" class="w3-light-grey">
+	<body id="cpw-woodpecker bg-white">
 
-		<!-- Top container -->
-			<div class="w3-bar w3-top w3-large w3-white" style="z-index:4;">
-				<img class="w3-bar-item" src="../../assets/images/logo.svg" style="width:70px">
-				<p class="w3-bar-item">CPW Woodpecker</p>
-				<a class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="OpenSidebar();" title="Abrir men&uacute;">
-					<i class="fa fa-bars"></i>
-				</a>
-				<a class="w3-bar-item w3-button w3-right" title="Cerrar sesi&oacute;n"><i class="fa fa-sign-out-alt"></i></a>
-				<a class="w3-bar-item w3-button w3-right" title="Buscar"><i class="fa fa-search"></i></a>
-			</div>
+		<main id="main_container" class="container-fluid">
+			<div class="row">
 
-		<!-- Sidebar -->
-			<nav id="sidebar" class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;">
-				<br>
-				<div class="w3-container w3-center">
-					<img class="w3-bar-item" src="../../assets/images/blank_avatar.svg" style="width:80px">
-					<h3>Nombre de la empresa</h3>
-				</div>
-				<hr>
-				<div class="w3-container w3-row">
-					<div class="w3-col s4">
-						<img src="../../assets/images/blank_avatar.svg" class="w3-circle w3-margin-right" style="width:46px">
-					</div>
-					<div class="w3-col s8 w3-bar">
-						<span>Welcome, <strong>Mike</strong></span>
-						<br>
-						<a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
-						<a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
-						<a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
-					</div>
-				</div>
-				<hr>
-				<div class="w3-container">
-					<h5>Men&uacute;</h5>
-				</div>
-				<div id="menu" class="w3-bar-block">
-					<a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="CloseSidebar()" title="Cerrar men&uacute;"><i class="fa fa-minus"></i>Close Menu</a>
-					<a href="#dashboard" class="w3-bar-item w3-button w3-padding" tag="dashboard"><i class="fa fa-tachometer-alt"></i>Panel</a>
-					<a href="#business" class="w3-bar-item w3-button w3-padding" tag="business"><i class="fa fa-building"></i>Empresas</a>
-					<a href="#banks" class="w3-bar-item w3-button w3-padding" tag="banks"><i class="fa fa-landmark"></i>Bancos</a>
-					<a href="#currency" class="w3-bar-item w3-button w3-padding" tag="currency"><i class="fa fa-dollar-sign"></i>Divisas</a>
-					<a href="#inventaries" class="w3-bar-item w3-button w3-padding" tag="inventaries"><i class="fa fa-book"></i>Inventarios</a>
-					<a href="#accounts" class="w3-bar-item w3-button w3-padding" tag="accounts"><i class="fa fa-address-book"></i>Cuentas</a>
-					<a href="#deals" class="w3-bar-item w3-button w3-padding" tag="deals"><i class="fa fa-handshake"></i>Negociaciones</a>
-					<a href="#pays" class="w3-bar-item w3-button w3-padding" tag="pays"><i class="fa fa-money-bill"></i>Pagos</a>
-					<a href="#billing" class="w3-bar-item w3-button w3-padding" tag="billing"><i class="fa fa-edit"></i>Facturaci&oacute;n</a>
-					<a href="#reports" class="w3-bar-item w3-button w3-padding" tag="reports"><i class="fa fa-chart-line"></i>Reportes</a>
-				</div>
-			</nav>
-		<!-- /Sidebar -->
-
-		<!-- Overlay effect when opening sidebar on small screens -->
-			<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-		<!-- Pages -->
-			<main id="content_pages" class="w3-main" style="margin-left:300px;margin-top:43px;">
-			
-				<!-- Page 1: Panel -->
-					<article id="page_dashboard">
-
-						<!-- Header -->
-							<header class="w3-container" style="padding-top:22px">
-								<h5><b><i class="fa fa-tachometer-alt"></i> Panel</b></h5>
-							</header>
-
-						<!-- Sections -->
-							<!-- Section 1: General statistics -->
-								<section class="w3-panel w3-margin-bottom">
-									<div class="w3-row-padding">
-										<div class="w3-quarter">
-											<div class="w3-container w3-padding-16 w3-white w3-text-theme">
-												<div class="w3-left"><i class="fa fa-handshake w3-xxxlarge"></i></div>
-												<div class="w3-right">
-													<h3>52</h3>
-												</div>
-												<div class="w3-clear"></div>
-												<h4>Negociaciones</h4>
-											</div>
-										</div>
-										<div class="w3-quarter">
-											<div class="w3-container w3-padding-16 w3-white w3-text-theme">
-												<div class="w3-left"><i class="fa fa-money-bill w3-xxxlarge"></i></div>
-												<div class="w3-right">
-													<h3>99</h3>
-												</div>
-												<div class="w3-clear"></div>
-												<h4>Pagos</h4>
-											</div>
-										</div>
-										<div class="w3-quarter">
-											<div class="w3-container w3-padding-16 w3-white w3-text-theme">
-												<div class="w3-left"><i class="fa fa-address-book w3-xxxlarge"></i></div>
-												<div class="w3-right">
-													<h3>23</h3>
-												</div>
-												<div class="w3-clear"></div>
-												<h4>Cuentas</h4>
-											</div>
-										</div>
-										<div class="w3-quarter">
-											<div class="w3-container w3-padding-16 w3-white w3-text-theme">
-												<div class="w3-left"><i class="fa fa-dollar-sign w3-xxxlarge"></i></div>
-												<div class="w3-right">
-													<h3>50</h3>
-												</div>
-												<div class="w3-clear"></div>
-												<h4>Divisas</h4>
-											</div>
-										</div>
-									</div>
-								</section>
-							
-							<!-- Section 2 -->
-								<section class="w3-panel">
-									<div class="w3-row-padding">
-										<div class="w3-half">
-											<div class="w3-card w3-white">
-												<h5 class="w3-padding w3-theme">Beneficio y p&eacute;rdida</h5>
-												<a onclick="GETRequest();" class="w3-button">GET<a>
-												<a onclick="POSTRequest();" class="w3-button">POST<a>
-												<a onclick="PUTRequest();" class="w3-button">PUT<a>
-												<a onclick="DELRequest();" class="w3-button">DEL<a>
-												<div class="w3-padding">
-													<p>Ingresos</p>
-													<div class="w3-theme-l3 w3-margin-bottom">
-														<div class="w3-container w3-center w3-padding-16 w3-theme-l1" style="width:25%;">25% (2500,00 $)</div>
-													</div>
-													<p>Gastos</p>
-													<div class="w3-theme-l3 w3-margin-bottom">
-														<div class="w3-container w3-center w3-padding-16 w3-theme-l1" style="width:75%;">75% (7500,00 $)</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="w3-half">
-											<div class="w3-card w3-white">
-												<h5 class="w3-padding w3-theme">Cuentas bancarias</h5>
-												<div class="w3-padding">
-													<table class="w3-table w3-striped w3-white">
-														<tr>
-															<th>Banco</th>
-															<th>Transacci&oacute;n</th>
-															<th>Monto</th>
-															<th>Tiempo</th>
-														</tr>
-														<tr>
-															<td>Banco del Caribe, C. A.</td>
-															<td>Retiro</td>
-															<td class="w3-text-red">- 20.000.000,00 BsS (VES)</td>
-															<td><i>hace 10 min</i></td>
-														</tr>
-														<tr>
-															<td>Banco de Venezuela, C. A.</td>
-															<td>Transferencia</td>
-															<td class="w3-text-theme">+ 55.000.000,00 BsS (VES)</td>
-															<td><i>hace 40 min</i></td>
-														</tr>
-													</table>
-												</div>
-											</div>
-										</div>
-									</div>
-								</section>
-							
-							<!-- Section 3 -->
-								<section class="w3-panel">
-									<div class="w3-row-padding">
-										<div class="w3-half">
-											<div class="w3-card w3-white">
-												<h5 class="w3-padding w3-theme">Ventas</h5>
-												<div class="w3-padding">
-													<div>
-														<canvas id="sales_panel"></canvas>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="w3-half">
-											<div class="w3-card w3-white">
-												<h5 class="w3-padding w3-theme">Facturas</h5>
-												<div class="w3-padding">
-													<div class="w3-container w3-margin-bottom">
-														<div class="w3-container">
-															<p class="w3-left">Vencido</p><p class="w3-right">No vencido</p>
-														</div>
-														<div>
-															<div class="w3-center w3-padding-16 w3-left w3-theme-l1" style="width:25%;display:inline-block;">25% (1100 $)</div>
-															<div class="w3-center w3-padding-16 w3-left w3-theme-l3" style="width:75%;display:inline-block;">+75% (1800 $)</div>
-														</div>
-													</div>
-													<div class="w3-container w3-margin-bottom">
-														<div class="w3-container">
-															<p class="w3-left">Pagado</p><p class="w3-right">No pagado</p>
-														</div>
-														<div>
-															<div class="w3-center w3-padding-16 w3-left w3-theme-l1" style="width:40%;display:inline-block;">40% (1100 $)</div>
-															<div class="w3-center w3-padding-16 w3-left w3-theme-l3" style="width:60%;display:inline-block;">60% (1800 $)</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</section>
-					</article>
-				<!-- /Page 1: Panel -->
-
-				<!-- Page 2: Business -->
-					<article id="page_business">
-						<div class="tab-bar w3-bar">
-							<a href="#" style="width:25%;"><div class="tablink w3-bottombar w3-hover-light-grey w3-padding w3-border-theme">Empresas</div></a>
-							<a href="#" style="width:25%;"><div class="tablink w3-bottombar w3-hover-light-grey w3-padding">Usuarios</div></a>
-							<a href="#" style="width:25%;"><div class="tablink w3-bottombar w3-hover-light-grey w3-padding">Permisos</div></a>
-							<a href="#" style="width:25%;"><div class="tablink w3-bottombar w3-hover-light-grey w3-padding">Niveles</div></a>
+				<!-- Sidebar section -->
+					<nav id="sidebar_section" class="col-md-3 col-lg-2 d-md-block sidebar collapse px-4">
+						<div class="position-sticky pt-3">
+							<div class="container mb-5">
+								<a class="navbar-brand" href="javascript:void(0)">
+									<img class="me-2" src="../../assets/images/logo.svg" style="width:30px">
+									<span class="h5 text-dark">CPW Woodpecker</span>
+								</a>
+							</div>
+							<ul class="nav nav-pills flex-column justify-contents-between">
+								<li class="nav-item">
+									<a class="nav-link active row" href="#">
+										<i class="fas fa-tachometer-alt col-2"></i>
+										<span class="col-10">Panel</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link row" href="#">
+										<i class="fas fas fa-building col-2"></i>
+										<span class="col-10">Empresas</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link row" href="#">
+										<i class="fas fas fa-landmark col-2"></i>
+										<span class="col-10">Bancos</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link row" href="#">
+										<i class="fas fas fa-dollar-sign col-2"></i>
+										<span class="col-10">Divisas</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link row" href="#">
+										<i class="fas fas fa-book col-2"></i>
+										<span class="col-10">Inventarios</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link row" href="#">
+										<i class="fas fas fa-address-book col-2"></i>
+										<span class="col-10">Cuentas</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link row" href="#">
+										<i class="fas fas fa-handshake col-2"></i>
+										<span class="col-10">Negociaciones</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link row" href="#">
+										<i class="fas fas fa-money-bill col-2"></i>
+										<span class="col-10">Pagos</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link row" href="#">
+										<i class="fas fas fa-edit col-2"></i>
+										<span class="col-10">Facturaci&oacute;n</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link row" href="#">
+										<i class="fas fas fa-chart-line col-2"></i>
+										<span class="col-10">Reportes</span>
+									</a>
+								</li>
+							</ul>
 						</div>
-						<!-- Header -->
-							<header class="w3-container" style="padding-top:22px">
-								<h5><b><i class="fa fa-tachometer-alt"></i> Empresas: Empresas</b></h5>
-							</header>
+					</nav>
+				<!-- /Sidebar section -->
 
-						<!-- Sections -->
-							<!-- Section 1 -->
-								<section class="w3-panel">
-									<div class="w3-padding">
-										<div class="w3-card w3-white">
-											<div class="w3-bar w3-theme">
-												<h5 class="w3-bar-item">Empresa</h5>
-												<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-trash"></i></a>
-												<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-edit"></i></a>
-												<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-plus"></i></a>
+				<!-- Body section -->
+					<main id="body_section" class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+						<!-- Body header -->
+							<header id="body_header" class="navbar navbar-expand-sm d-flex">
+								<div class="d-flex">
+									<div class="align-self-center"><i class="fas fa-search"></i></div>
+									<input class="form-control ms-2 border-0" type="text" placeholder="Buscar">
+								</div>
+								<ul class="navbar-nav ms-auto">
+									<li class="nav-item align-self-center">
+										<a class="nav-link btn" href="javascript:void(0)"><i class="fas fa-bell"></i></a>
+									</li>
+									<li class="nav-item align-self-center">
+										<a class="nav-link btn" href="javascript:void(0)"><i class="fas fa-cog"></i></a>
+									</li>
+									<li class="nav-item">
+										<div class="dropdown dropstart">
+											<a href="#" class="dropdown-toggle btn" data-bs-toggle="dropdown">
+												<img class="rounded-circle" src="../../assets/images/blank_avatar.svg" style="width:40px">
+											</a>
+											<ul class="dropdown-menu">
+												<li><a class="dropdown-item" href="#">Link 1</a></li>
+												<li><a class="dropdown-item" href="#">Link 2</a></li>
+												<li><a class="dropdown-item" href="#">Link 3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</header>
+						<!-- /Body header -->
+
+						<!-- Body contents -->
+							<main id="body_contents" class="container-fluid py-2">
+
+								<!-- Contents header -->
+									<header id="contents_header" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+										<h1 class="h2">Panel</h1>
+										<div class="btn-toolbar mb-2 mb-md-0">
+											<div class="btn-group me-2">
+												<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+												<button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
 											</div>
-											<div class="w3-padding">
-												<table class="w3-table w3-striped w3-white">
-													<tr>
-														<th></th>
-														<th>Empresa</th>
-														<th>Imagen</th>
-														<th>Creaci&oacute;n</th>
-														<th>Creador</th>
-													</tr>
-													<tr>
-														<td><input type="checkbox" name="name_1"></td>
-														<td>Banco Mercantil, C. A.</td>
-														<td></td>
-														<td>2021-02-21 02:03:32</td>
-														<td>admin</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" name="name_1"></td>
-														<td>Banco del Caribe, C. A.</td>
-														<td></td>
-														<td>2021-05-02 07:02:22</td>
-														<td>admin</td>
-													</tr>
-												</table>
+											<div class="dropdown">
+												<a href="#" class="dropdown-toggle btn btn-outline-secondary" data-bs-toggle="dropdown">
+													<i class="fas fa-calendar me-2"></i> Esta semana
+												</a>
+												<ul class="dropdown-menu">
+													<li><a class="dropdown-item" href="#">La semana pasada</a></li>
+													<li><a class="dropdown-item" href="#">Este mes</a></li>
+													<li><a class="dropdown-item" href="#">El mes pasado</a></li>
+													<li><a class="dropdown-item" href="#">Este a&ntilde;o</a></li>
+													<li><a class="dropdown-item" href="#">El a&ntilde;o pasado</a></li>
+												</ul>
 											</div>
 										</div>
+									</header>
+								<!-- /Contents header -->
+
+								<!-- Dashboard page -->
+									<div id="dashboard_page">
+										<article class="row">
+
+											<!-- Left section -->
+												<section class="col-9 row g-3">
+
+													<!-- KPI indicators -->
+
+														<!-- Card header -->
+															<header class="container">
+																<div class="px-4 py-2 bg-primary rounded d-flex justify-content-between">
+																	<div class="align-self-center">
+																		<span class="text-white fw-bold">Indicadores KPI</span>
+																	</div>
+																	<div class="dropdown">
+																		<a href="#" class="dropdown-toggle btn fs-6 text-white" data-bs-toggle="dropdown">
+																			<i class="fas fa-calendar me-2"></i> Esta semana
+																		</a>
+																		<ul class="dropdown-menu">
+																			<li><a class="dropdown-item" href="#">La semana pasada</a></li>
+																			<li><a class="dropdown-item" href="#">Este mes</a></li>
+																			<li><a class="dropdown-item" href="#">El mes pasado</a></li>
+																			<li><a class="dropdown-item" href="#">Este a&ntilde;o</a></li>
+																			<li><a class="dropdown-item" href="#">El a&ntilde;o pasado</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</header>
+														<!-- /Card header -->
+
+														<div class="col-6">
+															<div class="card shadow-sm">
+																<div class="card-body">
+																	<div class="container bg-light p-2">
+																		<i class="fas fa-handshake me-2"></i> Negociaciones
+																	</div>
+																	<div class="container row">
+																		<div class="col-4">
+																			<p class="font-weight-bold h2 text-shadow" style="font-weight: bold;">$3.456</p>
+																			<p class="text-muted h5">+58.34%</p>
+																		</div>
+																		<div class="col-8">
+																			<canvas id="chart_deals"></canvas>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-6">
+															<div class="card shadow-sm">
+																<div class="card-body">
+																	<div class="container bg-light p-2">
+																		<i class="fas fa-money-bill me-2"></i> Facturas
+																	</div>
+																	<div class="container row">
+																		<div class="col-4">
+																			<p class="font-weight-bold h2 text-shadow" style="font-weight: bold;">$1.544</p>
+																			<p class="text-muted h5">+82.34%</p>
+																		</div>
+																		<div class="col-8">
+																			<canvas id="chart_bills"></canvas>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-6">
+															<div class="card shadow-sm">
+																<div class="card-body">
+																	<div class="container bg-light p-2">
+																		<i class="fas fa-arrow-up me-2"></i> Ingresos
+																	</div>
+																	<div class="container row">
+																		<div class="col-4">
+																			<p class="font-weight-bold h2 text-shadow" style="font-weight: bold;">$563</p>
+																			<p class="text-muted h5">+12.34%</p>
+																		</div>
+																		<div class="col-8">
+																			<canvas id="chart_incomes"></canvas>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-6">
+															<div class="card shadow-sm">
+																<div class="card-body">
+																	<div class="container bg-light p-2">
+																		<i class="fas fa-arrow-down me-2"></i> Gastos
+																	</div>
+																	<div class="container row">
+																		<div class="col-4">
+																			<p class="font-weight-bold h2 text-shadow" style="font-weight: bold;">$2.648</p>
+																			<p class="text-muted h5">+67.34%</p>
+																		</div>
+																		<div class="col-8">
+																			<canvas id="chart_expenses"></canvas>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													<!-- /KPI indicators -->
+
+													<!-- Transactions registry -->
+														<div class="col-12">
+															<div class="card shadow-sm">
+																<div class="card-body flex-column">
+
+																	<!-- Card header -->
+																		<header class="px-4 py-2 bg-primary rounded d-flex justify-content-between">
+																			<div class="align-self-center">
+																				<span class="text-white fw-bold">Historial de usuarios</span>
+																			</div>
+																			<div class="dropdown">
+																				<a href="#" class="dropdown-toggle btn fs-6 text-white" data-bs-toggle="dropdown">
+																					<i class="fas fa-calendar me-2"></i> Esta semana
+																				</a>
+																				<ul class="dropdown-menu">
+																					<li><a class="dropdown-item" href="#">La semana pasada</a></li>
+																					<li><a class="dropdown-item" href="#">Este mes</a></li>
+																					<li><a class="dropdown-item" href="#">El mes pasado</a></li>
+																					<li><a class="dropdown-item" href="#">Este a&ntilde;o</a></li>
+																					<li><a class="dropdown-item" href="#">El a&ntilde;o pasado</a></li>
+																				</ul>
+																			</div>
+																		</header>
+																	<!-- /Card header -->
+
+																	<table class="table">
+																		<thead>
+																			<tr>
+																				<th scope="col">#</th>
+																				<th scope="col">First</th>
+																				<th scope="col">Last</th>
+																				<th scope="col">Handle</th>
+																				<th scope="col"></th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<th scope="row">1</th>
+																				<td>Mark</td>
+																				<td>Otto</td>
+																				<td>@mdo</td>
+																				<td>
+																					<div class="dropdown">
+																						<a href="#" class="dropdown-toggle btn fs-6" data-bs-toggle="dropdown">Opciones</a>
+																						<ul class="dropdown-menu">
+																							<li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>Ver</a></li>
+																							<li><a class="dropdown-item" href="#"><i class="fas fa-pen me-2"></i>Editar</a></li>
+																							<li><a class="dropdown-item" href="#"><i class="fas fa-trash me-2"></i>Borrar</a></li>
+																						</ul>
+																					</div>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div>
+													<!-- /Transactions registry -->
+												</section>
+											<!-- /Left section -->
+
+											<!-- Right section -->
+												<section class="col-3">
+
+													<!-- Bank Balance subsection -->
+														<section class="card shadow-sm mb-3">
+															<div class="card-body flex-column">
+																<div class="p-4 bg-secondary bg-gradient rounded-top d-flex">
+																	<div class="me-2">
+																		<p class="h4 fw-bold">Bancaribe</p>
+																		<span class="text-white">Bank account</span>
+																	</div>
+																	<div>
+																		<span class="text-white">Balance</span>
+																		<p class="h3 text-white fw-bold">$5.355,34</p>
+																	</div>
+																</div>
+																<div class="p-4 bg-primary rounded-bottom">
+																	<div class="dropdown w-100 d-grid">
+																		<a href="#" type="button" class="btn btn-block btn-light text-dark dropdown-toggle" data-bs-toggle="dropdown">
+																			<i class="fas fa-calendar me-2"></i> Bank Account
+																		</a>
+																		<ul class="dropdown-menu">
+																			<li><a class="dropdown-item" href="#">Scotiabank</a></li>
+																			<li><a class="dropdown-item" href="#">Deutsche Bank</a></li>
+																			<li><a class="dropdown-item" href="#">Banco Central de Venezuela</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</section>
+													<!-- /Bank Balance subsection -->
+
+													<!-- Users history subsection -->
+														<section class="card shadow-sm">
+															<div class="card-body flex-column">
+
+																<!-- Card header -->
+																	<header class="px-4 py-2 bg-primary rounded d-flex justify-content-between mb-3">
+																		<div class="align-self-center">
+																			<span class="text-white fw-bold">Historial de usuarios</span>
+																		</div>
+																		<div class="dropdown">
+																			<a href="#" class="dropdown-toggle btn fs-6 text-white" data-bs-toggle="dropdown">
+																				<i class="fas fa-calendar me-2"></i> Esta semana
+																			</a>
+																			<ul class="dropdown-menu">
+																				<li><a class="dropdown-item" href="#">La semana pasada</a></li>
+																				<li><a class="dropdown-item" href="#">Este mes</a></li>
+																				<li><a class="dropdown-item" href="#">El mes pasado</a></li>
+																				<li><a class="dropdown-item" href="#">Este a&ntilde;o</a></li>
+																				<li><a class="dropdown-item" href="#">El a&ntilde;o pasado</a></li>
+																			</ul>
+																		</div>
+																	</header>
+																<!-- /Card header -->
+
+																<div class="list-group">
+																	<a href="#" class="list-group-item list-group-item-action">
+																		<div class="d-flex w-100 justify-content">
+																			<img class="me-2" src="../../assets/images/blank_avatar.svg" style="width:20px">
+																			<h5 class="mb-1">Jose Rivas</h5>
+																			<small class="ms-auto">3 days ago</small>
+																		</div>
+																		<p class="mb-1 small">Cambio el campo "nombre" la tabla "empresa" de "CPW Online, C.A." a CPW Online, Inc.</p>
+																	</a>
+																	<a href="#" class="list-group-item list-group-item-action">
+																		<div class="d-flex w-100 justify-content">
+																			<img class="me-2" src="../../assets/images/blank_avatar.svg" style="width:20px">
+																			<h5 class="mb-1">Damaglys Guerra</h5>
+																			<small class="ms-auto">3 days ago</small>
+																		</div>
+																		<p class="mb-1 small">A&ntilde;adi&oacute; una negociaci&oacute;n.</p>
+																	</a>
+																	<a href="#" class="list-group-item list-group-item-action">
+																		<div class="d-flex w-100 justify-content">
+																			<img class="me-2" src="../../assets/images/blank_avatar.svg" style="width:20px">
+																			<h5 class="mb-1">David Rojas</h5>
+																			<small class="ms-auto">3 days ago</small>
+																		</div>
+																		<p class="mb-1 small">A&ntilde;adi&oacute; un pago.</p>
+																	</a>
+																</div>
+															</div>
+														</section>
+													<!-- Users history subsection -->
+												</section>
+											<!-- /Right section -->
+										</article>
 									</div>
-								</section>
-					</article>
-				<!-- /Page 2: Business -->
+								<!-- /Dashboard page -->
 
-				<!-- Page 3: Banks -->
-					<article id="page_banks">
+							</main>
+						<!-- /Body contents -->
+					</main>
+				<!-- /Body section -->
 
-						<!-- Header -->
-							<header class="w3-container" style="padding-top:22px">
-								<h5><b><i class="fa fa-tachometer-alt"></i> Bancos</b></h5>
-							</header>
-
-						<!-- Sections -->
-							<!-- Section 1 -->
-								<section class="w3-panel">
-								</section>
-					</article>
-				<!-- /Page 3: Banks -->
-
-				<!-- Page 4: Currency -->
-					<article id="page_currency">
-
-						<!-- Header -->
-							<header class="w3-container" style="padding-top:22px">
-								<h5><b><i class="fa fa-tachometer-alt"></i> Divisas</b></h5>
-							</header>
-
-						<!-- Sections -->
-							<!-- Section 1 -->
-								<section class="w3-panel">
-								</section>
-					</article>
-				<!-- /Page 4: Currency -->
-
-				<!-- Page 5: Inventaries -->
-					<article id="page_inventaries">
-
-						<!-- Header -->
-							<header class="w3-container" style="padding-top:22px">
-								<h5><b><i class="fa fa-tachometer-alt"></i> Inventarios</b></h5>
-							</header>
-
-						<!-- Sections -->
-							<!-- Section 1 -->
-								<section class="w3-panel">
-								</section>
-					</article>
-				<!-- /Page 5: Inventaries -->
-
-				<!-- Page 6: Accounts -->
-					<article id="page_accounts">
-
-						<!-- Header -->
-							<header class="w3-container" style="padding-top:22px">
-								<h5><b><i class="fa fa-tachometer-alt"></i> Cuentas</b></h5>
-							</header>
-
-						<!-- Sections -->
-							<!-- Section 1 -->
-								<section class="w3-panel">
-								</section>
-					</article>
-				<!-- /Page 6: Accounts -->
-
-				<!-- Page 7: Deals -->
-					<article id="page_deals">
-
-						<!-- Header -->
-							<header class="w3-container" style="padding-top:22px">
-								<h5><b><i class="fa fa-tachometer-alt"></i> Negociaciones</b></h5>
-							</header>
-
-						<!-- Sections -->
-							<!-- Section 1 -->
-								<section class="w3-panel">
-								</section>
-					</article>
-				<!-- /Page 7: Deals -->
-
-				<!-- Page 8: Pays -->
-					<article id="page_pays">
-
-						<!-- Header -->
-							<header class="w3-container" style="padding-top:22px">
-								<h5><b><i class="fa fa-tachometer-alt"></i> Pagos</b></h5>
-							</header>
-
-						<!-- Sections -->
-							<!-- Section 1 -->
-								<section class="w3-panel">
-								</section>
-					</article>
-				<!-- /Page 8: Pays -->
-
-				<!-- Page 9: Billing -->
-					<article id="page_billing">
-
-						<!-- Header -->
-							<header class="w3-container" style="padding-top:22px">
-								<h5><b><i class="fa fa-tachometer-alt"></i> Facturaci&oacute;n</b></h5>
-							</header>
-
-						<!-- Sections -->
-							<!-- Section 1 -->
-								<section class="w3-panel">
-								</section>
-					</article>
-				<!-- /Page 9: Billing -->
-
-				<!-- Page 10: Reports -->
-					<article id="page_reports">
-
-						<!-- Header -->
-							<header class="w3-container" style="padding-top:22px">
-								<h5><b><i class="fa fa-tachometer-alt"></i> Reportes</b></h5>
-							</header>
-
-						<!-- Sections -->
-							<!-- Section 1 -->
-								<section class="w3-panel">
-								</section>
-					</article>
-				<!-- /Page 10: Reports -->
-
-		
-			</main>
-		<!-- /Pages -->
-
-		<!-- Modals -->
-			<div id="modal-generic" class="w3-modal">
-				<div class="w3-modal-content">
-					<header class="w3-container w3-theme">
-						<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-						<h2>Modal Header</h2>
-					</header>
-					<div class="w3-container w3-padding">
-						<p>Some text..</p>
-						<p>Some text..</p>
-					</div>
-					<footer class="w3-container w3-padding w3-theme">
-						<p>Modal Footer</p>
-					</footer>
-				</div>
 			</div>
-		<!-- /Modals -->
-		
+		</main>
+
 		<!-- Scripts -->
-			<script src="../../assets/js/libraries/chart.js-v3.5.0.js"></script>
-			<script src="../../assets/js/libraries/jquery.min-v3.4.1.js"></script>
+			<!-- Libraries -->
+				<script src="../../assets/js/libraries/jquery.min-v3.4.1.js"></script>
+				<script src="../../assets/js/libraries/chart.js-v3.5.0.js"></script>
+				<script src="../../assets/js/libraries/bootstrap-v5.1.1/bootstrap.bundle.min.js"></script>
+
 			<script src="../../assets/js/api_rest.js"></script>
 			<script src="../../assets/js/main.js"></script>
-			<script src="../../assets/js/general_charts.js"></script>
+			<script src="../../assets/js/kpi_charts.js"></script>
 		<!-- /Scripts -->
 	</body>
 </html>
