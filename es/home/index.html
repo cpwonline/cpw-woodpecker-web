@@ -15,12 +15,12 @@
 	</head>
 	<body id="cpw-woodpecker bg-white">
 
-		<main id="main_container" class="container-fluid">
-			<div class="row">
+		<!-- Main container -->
+			<main id="main_container" class="container-fluid row position-relative">
 
 				<!-- Sidebar section -->
-					<nav id="sidebar_section" class="col-md-3 col-lg-2 d-md-block sidebar collapse px-4">
-						<div class="position-sticky pt-3">
+					<aside id="sidebar_section" class="col-md-3 col-lg-2 d-md-block sidebar collapse px-4 fixed-top">
+						<div class="pt-3">
 							<div class="container mb-5">
 								<a class="navbar-brand" href="javascript:void(0)">
 									<img class="me-2" src="../../assets/images/logo.svg" style="width:30px">
@@ -90,14 +90,14 @@
 								</li>
 							</ul>
 						</div>
-					</nav>
+					</aside>
 				<!-- /Sidebar section -->
 
 				<!-- Body section -->
 					<main id="body_section" class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
 						<!-- Body header -->
-							<header id="body_header" class="navbar navbar-expand-sm d-flex">
+							<header id="body_header" class="container-fluid navbar navbar-expand-sm d-flex sticky-top bg-white shadow-sm">
 								<div class="d-flex">
 									<div class="align-self-center"><i class="fas fa-search"></i></div>
 									<input class="form-control ms-2 border-0" type="text" placeholder="Buscar">
@@ -414,8 +414,8 @@
 					</main>
 				<!-- /Body section -->
 
-			</div>
-		</main>
+			</main>
+		<!-- /Main container -->
 
 		<!-- Scripts -->
 			<!-- Libraries -->
