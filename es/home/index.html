@@ -13,83 +13,83 @@
 			<link rel="stylesheet" href="../../assets/css/main.css">
 		<!-- /CSS Links -->
 	</head>
-	<body id="cpw-woodpecker bg-white">
+	<body id="cpw-woodpecker" class="bg-white">
 
 		<!-- Main container -->
 			<main id="main_container" class="container-fluid row position-relative">
 
 				<!-- Sidebar section -->
 					<aside id="sidebar_section" class="col-md-3 col-lg-2 d-md-block sidebar collapse px-4 fixed-top">
-						<div class="pt-3">
+						<nav class="pt-3">
 							<div class="container mb-5">
 								<a class="navbar-brand" href="javascript:void(0)">
 									<img class="me-2" src="../../assets/images/logo.svg" style="width:30px">
-									<span class="h5 text-dark">CPW Woodpecker</span>
+									<span class="h5 text-dark fw-light">CPW Woodpecker</span>
 								</a>
 							</div>
-							<ul class="nav nav-pills flex-column justify-contents-between">
+							<ul id="main_menu" class="nav nav-pills flex-column justify-contents-between">
 								<li class="nav-item">
-									<a class="nav-link active row" href="#">
+									<a class="nav-link row text-secondary" href="#dashboard">
 										<i class="fas fa-tachometer-alt col-2"></i>
-										<span class="col-10">Panel</span>
+										<span>Panel</span>
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link row" href="#">
+									<a class="nav-link row text-secondary" href="#business">
 										<i class="fas fas fa-building col-2"></i>
-										<span class="col-10">Empresas</span>
+										<span>Empresas</span>
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link row" href="#">
+									<a class="nav-link row text-secondary" href="#banks">
 										<i class="fas fas fa-landmark col-2"></i>
-										<span class="col-10">Bancos</span>
+										<span>Bancos</span>
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link row" href="#">
+									<a class="nav-link row text-secondary" href="#currency">
 										<i class="fas fas fa-dollar-sign col-2"></i>
-										<span class="col-10">Divisas</span>
+										<span>Divisas</span>
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link row" href="#">
+									<a class="nav-link row text-secondary" href="#inventaries">
 										<i class="fas fas fa-book col-2"></i>
-										<span class="col-10">Inventarios</span>
+										<span>Inventarios</span>
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link row" href="#">
+									<a class="nav-link row text-secondary" href="#accounts">
 										<i class="fas fas fa-address-book col-2"></i>
-										<span class="col-10">Cuentas</span>
+										<span>Cuentas</span>
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link row" href="#">
+									<a class="nav-link row text-secondary" href="#deals">
 										<i class="fas fas fa-handshake col-2"></i>
-										<span class="col-10">Negociaciones</span>
+										<span>Negociaciones</span>
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link row" href="#">
+									<a class="nav-link row text-secondary" href="#pays">
 										<i class="fas fas fa-money-bill col-2"></i>
-										<span class="col-10">Pagos</span>
+										<span>Pagos</span>
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link row" href="#">
+									<a class="nav-link row text-secondary" href="#billing">
 										<i class="fas fas fa-edit col-2"></i>
-										<span class="col-10">Facturaci&oacute;n</span>
+										<span>Facturaci&oacute;n</span>
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link row" href="#">
+									<a class="nav-link row text-secondary" href="#reports">
 										<i class="fas fas fa-chart-line col-2"></i>
-										<span class="col-10">Reportes</span>
+										<span>Reportes</span>
 									</a>
 								</li>
 							</ul>
-						</div>
+						</nav>
 					</aside>
 				<!-- /Sidebar section -->
 
@@ -130,7 +130,10 @@
 
 								<!-- Contents header -->
 									<header id="contents_header" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-										<h1 class="h2">Panel</h1>
+										<h2 id="contents_header_title" class="h2">
+											<i class="me-2"></i>
+											<span></span>
+										</h2>
 										<div class="btn-toolbar mb-2 mb-md-0">
 											<div class="btn-group me-2">
 												<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -153,8 +156,8 @@
 								<!-- /Contents header -->
 
 								<!-- Dashboard page -->
-									<div id="dashboard_page">
-										<article class="row">
+									<article id="dashboard_page" class="body_contents_page">
+										<div class="row">
 
 											<!-- Left section -->
 												<section class="col-9 row g-3">
@@ -405,9 +408,21 @@
 													<!-- Users history subsection -->
 												</section>
 											<!-- /Right section -->
-										</article>
-									</div>
+										</div>
+									</article>
 								<!-- /Dashboard page -->
+
+								<!-- Business page -->
+									<article id="business_page" class="body_contents_page">
+										Business
+									</article>
+								<!-- /Business page -->
+
+								<!-- Banks page -->
+									<article id="banks_page" class="body_contents_page">
+										Banks
+									</article>
+								<!-- /Banks page -->
 
 							</main>
 						<!-- /Body contents -->
@@ -423,9 +438,11 @@
 				<script src="../../assets/js/libraries/chart.js-v3.5.0.js"></script>
 				<script src="../../assets/js/libraries/bootstrap-v5.1.1/bootstrap.bundle.min.js"></script>
 
-			<script src="../../assets/js/api_rest.js"></script>
 			<script src="../../assets/js/main.js"></script>
+			<script src="../../assets/js/api_rest.js"></script>
 			<script src="../../assets/js/kpi_charts.js"></script>
+			<script src="../../assets/js/menus.js"></script>
+			<script src="../../assets/js/sidebar.js"></script>
 		<!-- /Scripts -->
 	</body>
 </html>
