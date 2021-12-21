@@ -1,72 +1,85 @@
 
 /* --- HTTP Requests --- */
 
-const GETRequest = () => {
-	let data = JSON.stringify({
-		"pair-information": [
-			{"auth": {"user": "root", "password": "root_password"}}
-			,{"data": [
-				{"type": "fields", "contents": ["id", "name", "reg_date"]}
-			]}
-		]
-	});
+class APIRESTSystem{
+	constructor(endpoint = '', method = 'GET', data = {},  url = "http://127.0.0.1:8080/api/v0/"){
+		this.endpoint = endpoint;
+		this.method = method;
+		this.data = data
+		this.url = url;
+	}
 
-	let request = new XMLHttpRequest();
-	request.open("GET", "/api/v0/business?json=" + data, true);
+	MakeHTTPRequest(){
+		switch(this.method){
+			case "GET":
+				return this.GETRequest();
+				break;
+			case "POST":
+				return this.POSTRequest();
+				break;
+			case "PUT":
+				return this.PUTRequest();
+				break;
+			case "DEL":
+				return this.DELRequest();
+				break;
+			default:
+				return this.GETRequest();
+				break;
+		}
+	}
 
-	request.send();
-}
+	async GETRequest() {
+		const response = await fetch(this.url + this.endpoint + "?json=" + JSON.stringify(this.data), {
+			method: 'GET'
+			,mode: 'cors'
+			,cache: 'no-cache'
+			,credentials: 'same-origin'
+			,redirect: 'follow'
+			,referrerPolicy: 'no-referrer'
+		});
+		return response.json();
+	}
 
-const POSTRequest = () => {
-	let data = JSON.stringify({
-		"pair-information": [
-			{"auth": {"user": "root", "password": "root_password"}}
-			,{"data": [
-				{"type": "fields", "contents": ["name"]}
-				,{"type": "values", "contents": [["ecorp"], ["mattermost"], ["fsociety"]]}
-			]}
-		]
-	});
+	async POSTRequest() {
+		const response = await fetch(this.url + this.endpoint, {
+			method: 'POST'
+			,mode: 'cors'
+			,cache: 'no-cache'
+			,credentials: 'same-origin'
+			,redirect: 'follow'
+			,referrerPolicy: 'no-referrer'
+			,headers: {'Content-Type': 'application/json'}
+			,body: JSON.stringify(this.data)
+		});
+		return response.json();
+	}
 
-	let request = new XMLHttpRequest();
-	request.open("POST", "/api/v0/business", true);
-	request.setRequestHeader("Content-Type", "application/json");
+	async PUTRequest() {
+		const response = await fetch(this.url + this.endpoint, {
+			method: 'PUT'
+			,mode: 'cors'
+			,cache: 'no-cache'
+			,credentials: 'same-origin'
+			,redirect: 'follow'
+			,referrerPolicy: 'no-referrer'
+			,headers: {'Content-Type': 'application/json'}
+			,body: JSON.stringify(data)
+		});
+		return response.json();
+	}
 
-	request.send(data);
-}
-
-const PUTRequest = () => {
-	let data = JSON.stringify({
-		"pair-information": [
-			{"auth": {"user": "root", "password": "root_password"}}
-			,{"data": [
-				{"type": "iqual", "col": "name", "content": "mattermost"}
-				,{"type": "set", "col": "name", "content": "jquery-corp"}
-				,{"type": "set", "col": "reg_date", "content": "2021-01-01 12:00:00"}
-			]}
-		]
-	});
-
-	let request = new XMLHttpRequest();
-	request.open("PUT", "/api/v0/business", true);
-	request.setRequestHeader("Content-Type", "application/json");
-
-	request.send(data);
-}
-
-const DELRequest = () => {
-	let data = JSON.stringify({
-		"pair-information": [
-			{"auth": {"user": "root", "password": "root_password"}}
-			,{"data": [
-				{"type": "iqual", "col": "name", "content": "ecorp"}
-			]}
-		]
-	});
-
-	let request = new XMLHttpRequest();
-	request.open("DEL", "/api/v0/business", true);
-	request.setRequestHeader("Content-Type", "application/json");
-
-	request.send(data);
+	async DELRequest() {
+		const response = await fetch(this.url + this.endpoint, {
+			method: 'DEL'
+			,mode: 'cors'
+			,cache: 'no-cache'
+			,credentials: 'same-origin'
+			,redirect: 'follow'
+			,referrerPolicy: 'no-referrer'
+			,headers: {'Content-Type': 'application/json'}
+			,body: JSON.stringify(this.data)
+		});
+		return response.json();
+	}
 }
