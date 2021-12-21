@@ -17,6 +17,10 @@
 	height: 100hv;
 }
 
-#body_contents{
+#cpw-woodpecker #body_contents{
 	background: #eee;
+}
+
+#cpw-woodpecker #body_contents article.body_contents_page{
+	display: none;
 }
