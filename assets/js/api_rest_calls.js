@@ -20,15 +20,20 @@ const GetBusinessTable = () => {
 
 	call.MakeHTTPRequest().then(data => {
 		$("#cpw-woodpecker #business_table tbody").empty();
+
 		for(let key in data.results){
 			let cell1 = $("<th scope='row'></th>").text(data.results[key].id);
 			let cell2 = $("<td></td>").text(data.results[key].name);
-			let cell3
 
+			let cell3;
 			if(data.results[key].image === undefined)
 				cell3 = $("<td></td>").append("<img width='40' src='../../assets/images/blank_avatar.svg'/>");
-			else
-				cell3 = $("<td></td>").append("<img src='" + data.results[key].image + "'/>");
+			else{
+				let image = $('<img alt="' + data.results[key].name + '" />');
+				let blob = new Blob([data.results[key].image], {type: 'image/jpeg'});
+				$(image).attr("src", window.URL.createObjectURL(blob));
+				cell3 = $("<td></td>").append(image);
+			}
 
 			let cell4 = $("<td></td>").text(data.results[key].reg_date);
 
