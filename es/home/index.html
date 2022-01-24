@@ -157,116 +157,210 @@
 
 								<!-- Dashboard page -->
 									<article id="dashboard_page" class="body_contents_page">
-										<div class="row">
 
-											<!-- Left section -->
-												<section class="col-9 row g-3">
+										<!-- Main row -->
+											<div class="row">
 
-													<!-- KPI indicators -->
+												<!-- Left section -->
+													<section class="col-9 row g-3">
 
-														<!-- Card header -->
-															<header class="container">
-																<div class="px-4 py-2 bg-primary rounded d-flex justify-content-between">
-																	<div class="align-self-center">
-																		<span class="text-white fw-bold">Indicadores KPI</span>
-																	</div>
-																	<div class="dropdown">
-																		<a href="#" class="dropdown-toggle btn fs-6 text-white" data-bs-toggle="dropdown">
-																			<i class="fas fa-calendar me-2"></i> Esta semana
-																		</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="#">La semana pasada</a></li>
-																			<li><a class="dropdown-item" href="#">Este mes</a></li>
-																			<li><a class="dropdown-item" href="#">El mes pasado</a></li>
-																			<li><a class="dropdown-item" href="#">Este a&ntilde;o</a></li>
-																			<li><a class="dropdown-item" href="#">El a&ntilde;o pasado</a></li>
-																		</ul>
-																	</div>
-																</div>
-															</header>
-														<!-- /Card header -->
+														<!-- KPI indicators -->
 
-														<div class="col-6">
-															<div class="card shadow-sm">
-																<div class="card-body">
-																	<div class="container bg-light p-2">
-																		<i class="fas fa-handshake me-2"></i> Negociaciones
-																	</div>
-																	<div class="container row">
-																		<div class="col-4">
-																			<p class="font-weight-bold h2 text-shadow" style="font-weight: bold;">$3.456</p>
-																			<p class="text-muted h5">+58.34%</p>
+															<!-- Card header -->
+																<header class="container">
+																	<div class="px-4 py-2 bg-primary rounded d-flex justify-content-between">
+																		<div class="align-self-center">
+																			<span class="text-white fw-bold">Indicadores KPI</span>
 																		</div>
-																		<div class="col-8">
-																			<canvas id="chart_deals"></canvas>
+																		<div class="dropdown">
+																			<a href="#" class="dropdown-toggle btn fs-6 text-white" data-bs-toggle="dropdown">
+																				<i class="fas fa-calendar me-2"></i> Esta semana
+																			</a>
+																			<ul class="dropdown-menu">
+																				<li><a class="dropdown-item" href="#">La semana pasada</a></li>
+																				<li><a class="dropdown-item" href="#">Este mes</a></li>
+																				<li><a class="dropdown-item" href="#">El mes pasado</a></li>
+																				<li><a class="dropdown-item" href="#">Este a&ntilde;o</a></li>
+																				<li><a class="dropdown-item" href="#">El a&ntilde;o pasado</a></li>
+																			</ul>
 																		</div>
 																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="card shadow-sm">
-																<div class="card-body">
-																	<div class="container bg-light p-2">
-																		<i class="fas fa-money-bill me-2"></i> Facturas
-																	</div>
-																	<div class="container row">
-																		<div class="col-4">
-																			<p class="font-weight-bold h2 text-shadow" style="font-weight: bold;">$1.544</p>
-																			<p class="text-muted h5">+82.34%</p>
+																</header>
+															<!-- /Card header -->
+
+															<div class="col-6">
+																<div class="card shadow-sm">
+																	<div class="card-body">
+																		<div class="container bg-light p-2">
+																			<i class="fas fa-handshake me-2"></i> Negociaciones
 																		</div>
-																		<div class="col-8">
-																			<canvas id="chart_bills"></canvas>
+																		<div class="container row">
+																			<div class="col-4">
+																				<p class="font-weight-bold h2 text-shadow" style="font-weight: bold;">$3.456</p>
+																				<p class="text-muted h5">+58.34%</p>
+																			</div>
+																			<div class="col-8">
+																				<canvas id="chart_deals"></canvas>
+																			</div>
 																		</div>
 																	</div>
 																</div>
 															</div>
-														</div>
-														<div class="col-6">
-															<div class="card shadow-sm">
-																<div class="card-body">
-																	<div class="container bg-light p-2">
-																		<i class="fas fa-arrow-up me-2"></i> Ingresos
-																	</div>
-																	<div class="container row">
-																		<div class="col-4">
-																			<p class="font-weight-bold h2 text-shadow" style="font-weight: bold;">$563</p>
-																			<p class="text-muted h5">+12.34%</p>
+															<div class="col-6">
+																<div class="card shadow-sm">
+																	<div class="card-body">
+																		<div class="container bg-light p-2">
+																			<i class="fas fa-money-bill me-2"></i> Facturas
 																		</div>
-																		<div class="col-8">
-																			<canvas id="chart_incomes"></canvas>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="card shadow-sm">
-																<div class="card-body">
-																	<div class="container bg-light p-2">
-																		<i class="fas fa-arrow-down me-2"></i> Gastos
-																	</div>
-																	<div class="container row">
-																		<div class="col-4">
-																			<p class="font-weight-bold h2 text-shadow" style="font-weight: bold;">$2.648</p>
-																			<p class="text-muted h5">+67.34%</p>
-																		</div>
-																		<div class="col-8">
-																			<canvas id="chart_expenses"></canvas>
+																		<div class="container row">
+																			<div class="col-4">
+																				<p class="font-weight-bold h2 text-shadow" style="font-weight: bold;">$1.544</p>
+																				<p class="text-muted h5">+82.34%</p>
+																			</div>
+																			<div class="col-8">
+																				<canvas id="chart_bills"></canvas>
+																			</div>
 																		</div>
 																	</div>
 																</div>
 															</div>
-														</div>
-													<!-- /KPI indicators -->
+															<div class="col-6">
+																<div class="card shadow-sm">
+																	<div class="card-body">
+																		<div class="container bg-light p-2">
+																			<i class="fas fa-arrow-up me-2"></i> Ingresos
+																		</div>
+																		<div class="container row">
+																			<div class="col-4">
+																				<p class="font-weight-bold h2 text-shadow" style="font-weight: bold;">$563</p>
+																				<p class="text-muted h5">+12.34%</p>
+																			</div>
+																			<div class="col-8">
+																				<canvas id="chart_incomes"></canvas>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-6">
+																<div class="card shadow-sm">
+																	<div class="card-body">
+																		<div class="container bg-light p-2">
+																			<i class="fas fa-arrow-down me-2"></i> Gastos
+																		</div>
+																		<div class="container row">
+																			<div class="col-4">
+																				<p class="font-weight-bold h2 text-shadow" style="font-weight: bold;">$2.648</p>
+																				<p class="text-muted h5">+67.34%</p>
+																			</div>
+																			<div class="col-8">
+																				<canvas id="chart_expenses"></canvas>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														<!-- /KPI indicators -->
 
-													<!-- Transactions registry -->
-														<div class="col-12">
-															<div class="card shadow-sm">
+														<!-- Transactions registry -->
+															<div class="col-12">
+																<div class="card shadow-sm">
+																	<div class="card-body flex-column">
+
+																		<!-- Card header -->
+																			<header class="px-4 py-2 bg-primary rounded d-flex justify-content-between">
+																				<div class="align-self-center">
+																					<span class="text-white fw-bold">Historial de usuarios</span>
+																				</div>
+																				<div class="dropdown">
+																					<a href="#" class="dropdown-toggle btn fs-6 text-white" data-bs-toggle="dropdown">
+																						<i class="fas fa-calendar me-2"></i> Esta semana
+																					</a>
+																					<ul class="dropdown-menu">
+																						<li><a class="dropdown-item" href="#">La semana pasada</a></li>
+																						<li><a class="dropdown-item" href="#">Este mes</a></li>
+																						<li><a class="dropdown-item" href="#">El mes pasado</a></li>
+																						<li><a class="dropdown-item" href="#">Este a&ntilde;o</a></li>
+																						<li><a class="dropdown-item" href="#">El a&ntilde;o pasado</a></li>
+																					</ul>
+																				</div>
+																			</header>
+																		<!-- /Card header -->
+
+																		<table class="table">
+																			<thead>
+																				<tr>
+																					<th scope="col">#</th>
+																					<th scope="col">First</th>
+																					<th scope="col">Last</th>
+																					<th scope="col">Handle</th>
+																					<th scope="col"></th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<th scope="row">1</th>
+																					<td>Mark</td>
+																					<td>Otto</td>
+																					<td>@mdo</td>
+																					<td>
+																						<div class="dropdown">
+																							<a href="#" class="dropdown-toggle btn fs-6" data-bs-toggle="dropdown">Opciones</a>
+																							<ul class="dropdown-menu">
+																								<li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>Ver</a></li>
+																								<li><a class="dropdown-item" href="#"><i class="fas fa-pen me-2"></i>Editar</a></li>
+																								<li><a class="dropdown-item" href="#"><i class="fas fa-trash me-2"></i>Borrar</a></li>
+																							</ul>
+																						</div>
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+																</div>
+															</div>
+														<!-- /Transactions registry -->
+													</section>
+												<!-- /Left section -->
+
+												<!-- Right section -->
+													<section class="col-3">
+
+														<!-- Bank Balance subsection -->
+															<section class="card shadow-sm mb-3">
+																<div class="card-body flex-column">
+																	<div class="p-4 bg-secondary bg-gradient rounded-top d-flex">
+																		<div class="me-2">
+																			<p class="h4 fw-bold">Bancaribe</p>
+																			<span class="text-white">Bank account</span>
+																		</div>
+																		<div>
+																			<span class="text-white">Balance</span>
+																			<p class="h3 text-white fw-bold">$5.355,34</p>
+																		</div>
+																	</div>
+																	<div class="p-4 bg-primary rounded-bottom">
+																		<div class="dropdown w-100 d-grid">
+																			<a href="#" type="button" class="btn btn-block btn-light text-dark dropdown-toggle" data-bs-toggle="dropdown">
+																				<i class="fas fa-calendar me-2"></i> Bank Account
+																			</a>
+																			<ul class="dropdown-menu">
+																				<li><a class="dropdown-item" href="#">Scotiabank</a></li>
+																				<li><a class="dropdown-item" href="#">Deutsche Bank</a></li>
+																				<li><a class="dropdown-item" href="#">Banco Central de Venezuela</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</section>
+														<!-- /Bank Balance subsection -->
+
+														<!-- Users history subsection -->
+															<section class="card shadow-sm">
 																<div class="card-body flex-column">
 
 																	<!-- Card header -->
-																		<header class="px-4 py-2 bg-primary rounded d-flex justify-content-between">
+																		<header class="px-4 py-2 bg-primary rounded d-flex justify-content-between mb-3">
 																			<div class="align-self-center">
 																				<span class="text-white fw-bold">Historial de usuarios</span>
 																			</div>
@@ -285,218 +379,167 @@
 																		</header>
 																	<!-- /Card header -->
 
-																	<table class="table">
-																		<thead>
-																			<tr>
-																				<th scope="col">#</th>
-																				<th scope="col">First</th>
-																				<th scope="col">Last</th>
-																				<th scope="col">Handle</th>
-																				<th scope="col"></th>
-																			</tr>
-																		</thead>
-																		<tbody>
-																			<tr>
-																				<th scope="row">1</th>
-																				<td>Mark</td>
-																				<td>Otto</td>
-																				<td>@mdo</td>
-																				<td>
-																					<div class="dropdown">
-																						<a href="#" class="dropdown-toggle btn fs-6" data-bs-toggle="dropdown">Opciones</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>Ver</a></li>
-																							<li><a class="dropdown-item" href="#"><i class="fas fa-pen me-2"></i>Editar</a></li>
-																							<li><a class="dropdown-item" href="#"><i class="fas fa-trash me-2"></i>Borrar</a></li>
-																						</ul>
-																					</div>
-																				</td>
-																			</tr>
-																		</tbody>
-																	</table>
-																</div>
-															</div>
-														</div>
-													<!-- /Transactions registry -->
-												</section>
-											<!-- /Left section -->
-
-											<!-- Right section -->
-												<section class="col-3">
-
-													<!-- Bank Balance subsection -->
-														<section class="card shadow-sm mb-3">
-															<div class="card-body flex-column">
-																<div class="p-4 bg-secondary bg-gradient rounded-top d-flex">
-																	<div class="me-2">
-																		<p class="h4 fw-bold">Bancaribe</p>
-																		<span class="text-white">Bank account</span>
-																	</div>
-																	<div>
-																		<span class="text-white">Balance</span>
-																		<p class="h3 text-white fw-bold">$5.355,34</p>
-																	</div>
-																</div>
-																<div class="p-4 bg-primary rounded-bottom">
-																	<div class="dropdown w-100 d-grid">
-																		<a href="#" type="button" class="btn btn-block btn-light text-dark dropdown-toggle" data-bs-toggle="dropdown">
-																			<i class="fas fa-calendar me-2"></i> Bank Account
+																	<div class="list-group">
+																		<a href="#" class="list-group-item list-group-item-action">
+																			<div class="d-flex w-100 justify-content">
+																				<img class="me-2" src="../../assets/images/blank_avatar.svg" style="width:20px">
+																				<h5 class="mb-1">Jose Rivas</h5>
+																				<small class="ms-auto">3 days ago</small>
+																			</div>
+																			<p class="mb-1 small">Cambio el campo "nombre" la tabla "empresa" de "CPW Online, C.A." a CPW Online, Inc.</p>
 																		</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="#">Scotiabank</a></li>
-																			<li><a class="dropdown-item" href="#">Deutsche Bank</a></li>
-																			<li><a class="dropdown-item" href="#">Banco Central de Venezuela</a></li>
-																		</ul>
+																		<a href="#" class="list-group-item list-group-item-action">
+																			<div class="d-flex w-100 justify-content">
+																				<img class="me-2" src="../../assets/images/blank_avatar.svg" style="width:20px">
+																				<h5 class="mb-1">Damaglys Guerra</h5>
+																				<small class="ms-auto">3 days ago</small>
+																			</div>
+																			<p class="mb-1 small">A&ntilde;adi&oacute; una negociaci&oacute;n.</p>
+																		</a>
+																		<a href="#" class="list-group-item list-group-item-action">
+																			<div class="d-flex w-100 justify-content">
+																				<img class="me-2" src="../../assets/images/blank_avatar.svg" style="width:20px">
+																				<h5 class="mb-1">David Rojas</h5>
+																				<small class="ms-auto">3 days ago</small>
+																			</div>
+																			<p class="mb-1 small">A&ntilde;adi&oacute; un pago.</p>
+																		</a>
 																	</div>
 																</div>
-															</div>
-														</section>
-													<!-- /Bank Balance subsection -->
-
-													<!-- Users history subsection -->
-														<section class="card shadow-sm">
-															<div class="card-body flex-column">
-
-																<!-- Card header -->
-																	<header class="px-4 py-2 bg-primary rounded d-flex justify-content-between mb-3">
-																		<div class="align-self-center">
-																			<span class="text-white fw-bold">Historial de usuarios</span>
-																		</div>
-																		<div class="dropdown">
-																			<a href="#" class="dropdown-toggle btn fs-6 text-white" data-bs-toggle="dropdown">
-																				<i class="fas fa-calendar me-2"></i> Esta semana
-																			</a>
-																			<ul class="dropdown-menu">
-																				<li><a class="dropdown-item" href="#">La semana pasada</a></li>
-																				<li><a class="dropdown-item" href="#">Este mes</a></li>
-																				<li><a class="dropdown-item" href="#">El mes pasado</a></li>
-																				<li><a class="dropdown-item" href="#">Este a&ntilde;o</a></li>
-																				<li><a class="dropdown-item" href="#">El a&ntilde;o pasado</a></li>
-																			</ul>
-																		</div>
-																	</header>
-																<!-- /Card header -->
-
-																<div class="list-group">
-																	<a href="#" class="list-group-item list-group-item-action">
-																		<div class="d-flex w-100 justify-content">
-																			<img class="me-2" src="../../assets/images/blank_avatar.svg" style="width:20px">
-																			<h5 class="mb-1">Jose Rivas</h5>
-																			<small class="ms-auto">3 days ago</small>
-																		</div>
-																		<p class="mb-1 small">Cambio el campo "nombre" la tabla "empresa" de "CPW Online, C.A." a CPW Online, Inc.</p>
-																	</a>
-																	<a href="#" class="list-group-item list-group-item-action">
-																		<div class="d-flex w-100 justify-content">
-																			<img class="me-2" src="../../assets/images/blank_avatar.svg" style="width:20px">
-																			<h5 class="mb-1">Damaglys Guerra</h5>
-																			<small class="ms-auto">3 days ago</small>
-																		</div>
-																		<p class="mb-1 small">A&ntilde;adi&oacute; una negociaci&oacute;n.</p>
-																	</a>
-																	<a href="#" class="list-group-item list-group-item-action">
-																		<div class="d-flex w-100 justify-content">
-																			<img class="me-2" src="../../assets/images/blank_avatar.svg" style="width:20px">
-																			<h5 class="mb-1">David Rojas</h5>
-																			<small class="ms-auto">3 days ago</small>
-																		</div>
-																		<p class="mb-1 small">A&ntilde;adi&oacute; un pago.</p>
-																	</a>
-																</div>
-															</div>
-														</section>
-													<!-- Users history subsection -->
-												</section>
-											<!-- /Right section -->
-										</div>
+															</section>
+														<!-- Users history subsection -->
+													</section>
+												<!-- /Right section -->
+											</div>
+										<!-- /Main row -->
 									</article>
 								<!-- /Dashboard page -->
 
 								<!-- Business page -->
 									<article id="business_page" class="body_contents_page">
 
-										<!-- Add business -->
-											<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#business_add_modal">
-												Crear nueva empresa
-											</button>
+										<!-- Tabs -->
+											<ul id="tabs_business_page" class="nav nav-pills justify-content-center" role="tablist">
+												<li class="nav-item" role="presentation">
+													<button id="tab_label_business" class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab_panel_business" type="button" role="tab" aria-controls="tab_panel_business" aria-selected="true">Empresas</button>
+												</li>
+												<li class="nav-item" role="presentation">
+													<button id="tab_label_users" class="nav-link" data-bs-toggle="pill" data-bs-target="#tab_panel_users" type="button" role="tab" aria-controls="tab_panel_users" aria-selected="false">Usuarios</button>
+												</li>
+												<li class="nav-item" role="presentation">
+													<button id="tab_label_levels" class="nav-link" data-bs-toggle="pill" data-bs-target="#tab_panel_levels" type="button" role="tab" aria-controls="tab_panel_levels" aria-selected="false">Niveles</button>
+												</li>
+											</ul>
 
-											<!-- Modal -->
-												<div class="modal fade" id="business_add_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-													<div class="modal-dialog">
-														<div class="modal-content">
-															<div class="modal-header">
-																<h5 class="modal-title" id="exampleModalLabel">Crear nueva empresa</h5>
-																<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-															</div>
-															<div class="modal-body">
-																...
-															</div>
-															<div class="modal-footer">
-																<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-																<button type="button" class="btn btn-primary">Save changes</button>
-															</div>
-														</div>
-													</div>
-												</div>
-											<!-- Modal -->
-										<!-- /Add business -->
+											<div id="tabs_contents_business_page" class="tab-content" >
 
-										<div class="row">
+												<!-- Tab business -->
+													<div id="tab_panel_business" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab_label_business">
 
-											<!-- Left section -->
-												<section class="col-9 row g-3">
+														<!-- Add business -->
+															<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#business_add_modal">
+																Crear nueva empresa
+															</button>
 
-													<!-- Business table -->
-														<div class="col-12">
-															<div class="card shadow-sm">
-																<div class="card-body flex-column">
-
-																	<!-- Card header -->
-																		<header class="px-4 py-2 bg-primary rounded d-flex justify-content-between">
-																			<div class="align-self-center">
-																				<span class="text-white fw-bold">Empresas</span>
+															<!-- Modal -->
+																<div class="modal fade" id="business_add_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+																	<div class="modal-dialog">
+																		<div class="modal-content">
+																			<div class="modal-header">
+																				<h5 class="modal-title" id="exampleModalLabel">Crear nueva empresa</h5>
+																				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 																			</div>
-																			<div class="dropdown">
-																				<a href="#" class="dropdown-toggle btn fs-6 text-white" data-bs-toggle="dropdown">
-																					<i class="fas fa-calendar me-2"></i> Esta semana
-																				</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="#">La semana pasada</a></li>
-																					<li><a class="dropdown-item" href="#">Este mes</a></li>
-																					<li><a class="dropdown-item" href="#">El mes pasado</a></li>
-																					<li><a class="dropdown-item" href="#">Este a&ntilde;o</a></li>
-																					<li><a class="dropdown-item" href="#">El a&ntilde;o pasado</a></li>
-																				</ul>
+																			<div class="modal-body">
+																				...
 																			</div>
-																		</header>
-																	<!-- /Card header -->
-
-																	<table id="business_table" class="table">
-																		<thead>
-																			<tr>
-																				<th scope="col">#</th>
-																				<th scope="col">Nombre</th>
-																				<th scope="col">Imagen</th>
-																				<th scope="col">Fecha de creaci&oacute;n</th>
-																				<th scope="col"></th>
-																			</tr>
-																		</thead>
-																		<tbody>
-																		</tbody>
-																	</table>
+																			<div class="modal-footer">
+																				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+																				<button type="button" class="btn btn-primary">Save changes</button>
+																			</div>
+																		</div>
+																	</div>
 																</div>
+															<!-- Modal -->
+														<!-- /Add business -->
+
+														<!-- Main row -->
+															<div class="row">
+
+																<!-- Left section -->
+																	<section class="col-9 row g-3">
+
+																		<!-- Business table -->
+																			<div class="col-12">
+																				<div class="card shadow-sm">
+																					<div class="card-body flex-column">
+
+																						<!-- Card header -->
+																							<header class="px-4 py-2 bg-primary rounded d-flex justify-content-between">
+																								<div class="align-self-center">
+																									<span class="text-white fw-bold">Empresas</span>
+																								</div>
+																								<div class="dropdown">
+																									<a href="#" class="dropdown-toggle btn fs-6 text-white" data-bs-toggle="dropdown">
+																										<i class="fas fa-calendar me-2"></i> Esta semana
+																									</a>
+																									<ul class="dropdown-menu">
+																										<li><a class="dropdown-item" href="#">La semana pasada</a></li>
+																										<li><a class="dropdown-item" href="#">Este mes</a></li>
+																										<li><a class="dropdown-item" href="#">El mes pasado</a></li>
+																										<li><a class="dropdown-item" href="#">Este a&ntilde;o</a></li>
+																										<li><a class="dropdown-item" href="#">El a&ntilde;o pasado</a></li>
+																									</ul>
+																								</div>
+																							</header>
+																						<!-- /Card header -->
+
+																						<table id="business_table" class="table">
+																							<thead>
+																								<tr>
+																									<th scope="col">#</th>
+																									<th scope="col">Nombre</th>
+																									<th scope="col">Imagen</th>
+																									<th scope="col">Fecha de creaci&oacute;n</th>
+																									<th scope="col"></th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		<!-- /Business table -->
+
+																	</section>
+																<!-- /Left section -->
+
+																<!-- Right section -->
+																	<section class="col-3">
+
+																	</section>
+																<!-- /Right section -->
 															</div>
-														</div>
-													<!-- /Business table -->
+														<!-- /Main row -->
 
-												</section>
-											<!-- /Left section -->
+													</div>
+												<!-- /Tab business -->
 
-											<!-- Right section -->
-												<section class="col-3">
+												<!-- Tab users -->
+												<div id="tab_panel_users" class="tab-pane fade" role="tabpanel" aria-labelledby="tab_label_users">
 
-												</section>
-											<!-- /Right section -->
+												</div>
+												<!-- /Tab users -->
+
+												<!-- Tab levels -->
+												<div id="tab_panel_levels" class="tab-pane fade" role="tabpanel" aria-labelledby="tab_label_levels">
+
+												</div>
+												<!-- /Tab levels -->
+
+											</div>
+										<!-- /Tabs -->
+
 									</article>
 								<!-- /Business page -->
 
