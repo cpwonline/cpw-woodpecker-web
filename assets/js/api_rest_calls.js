@@ -7,6 +7,7 @@ $(function(){
 			$('#cpw-woodpecker #sidebar_section #main_menu a[href="#business"]').click(function(e){
 				GetBusinessTable();
 				GetUsersTable();
+				GetLevelsTable();
 			});
 
 });
@@ -69,6 +70,25 @@ const GetUsersTable = () => {
 
 			let row = $("<tr></tr>").append(cell1, cell2, cell3, cell4, options);
 			$("#cpw-woodpecker #users_table tbody").append(row);
+		}
+	});
+}
+
+const GetLevelsTable = () => {
+	let data = {"pair-information": [{"auth": {"user": "root", "password": "root_password"}}, {"data": [{"type": "fields", "contents": ["id", "name", "number", "reg_date"]}]}]};
+	let call = new APIRESTSystem("business/levels", "GET", data);
+
+	call.MakeHTTPRequest().then(data => {
+		$("#cpw-woodpecker #users_table tbody").empty();
+
+		for(let key in data.results){
+			let cell1 = $("<th scope='row'></th>").text(data.results[key].id);
+			let cell2 = $("<td></td>").text(data.results[key].name);
+			let cell3 = $("<td></td>").text(data.results[key].number);
+			let cell4 = $("<td></td>").text(data.results[key].reg_date);
+
+			let row = $("<tr></tr>").append(cell1, cell2, cell3, cell4, options);
+			$("#cpw-woodpecker #levels_table tbody").append(row);
 		}
 	});
 }
