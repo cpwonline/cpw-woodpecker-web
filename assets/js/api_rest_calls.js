@@ -3,12 +3,21 @@
 $(function(){
 
 	/* --- Call to API REST System --- */
-		// Click on menus
-			$('#cpw-woodpecker #sidebar_section #main_menu a[href="#business"]').click(function(e){
-				GetBusinessTable();
-				GetUsersTable();
-				GetLevelsTable();
+		// Create
+			$('#cpw-woodpecker .business_add').click(function(e){
+				let form_add = VerifyMenuURL($(this).attr('tag'));
+				let name = $("#cpw-woodpecker #" + form_add + " .add_business_name").val();
+				let image = $("#cpw-woodpecker #" + form_add + " .add_business_name").val();
 			});
+
+		// Read
+			GetBusinessTable();
+			GetUsersTable();
+			GetLevelsTable();
+
+		// Update
+
+		// Delete
 
 });
 

@@ -419,7 +419,7 @@
 									<article id="business_page" class="body_contents_page">
 
 										<!-- Tabs -->
-											<ul id="tabs_business_page" class="nav nav-pills justify-content-center" role="tablist">
+											<ul id="tabs_business_page" class="nav nav-pills justify-content-center nav-fill mb-4" role="tablist">
 												<li class="nav-item" role="presentation">
 													<button id="tab_label_business" class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab_panel_business" type="button" role="tab" aria-controls="tab_panel_business" aria-selected="true">Empresas</button>
 												</li>
@@ -436,31 +436,34 @@
 												<!-- Tab business -->
 													<div id="tab_panel_business" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab_label_business">
 
-														<!-- Add business -->
-															<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#business_add_modal">
-																Crear nueva empresa
-															</button>
-
-															<!-- Modal -->
-																<div class="modal fade" id="business_add_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-																	<div class="modal-dialog">
-																		<div class="modal-content">
-																			<div class="modal-header">
-																				<h5 class="modal-title" id="exampleModalLabel">Crear nueva empresa</h5>
-																				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-																			</div>
-																			<div class="modal-body">
-																				...
-																			</div>
-																			<div class="modal-footer">
-																				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-																				<button type="button" class="btn btn-primary">Save changes</button>
-																			</div>
+														<!-- Modal: Add new business -->
+															<div class="modal fade" id="business_add_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+																<div class="modal-dialog">
+																	<div class="modal-content">
+																		<div class="modal-header">
+																			<h5 class="modal-title" id="exampleModalLabel">Crear nueva empresa</h5>
+																			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+																		</div>
+																		<div class="modal-body">
+																			<form id="business_add_form_main">
+																				<div class="mb-3">
+																					<label for="add_business_name" class="form-label">Nombre de la empresa</label>
+																					<input type="text" class="form-control add_business_name">
+																				</div>
+																				<div class="mb-3">
+																					<label for="business_add_image" class="form-label">Imagen</label>
+																					<input type="file" class="form-control business_add_image">
+																				</div>
+																			</form>
+																		</div>
+																		<div class="modal-footer">
+																			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+																			<button type="button" tag="business_add_form_main" class="business_add btn btn-primary">Crear empresa</button>
 																		</div>
 																	</div>
 																</div>
-															<!-- Modal -->
-														<!-- /Add business -->
+															</div>
+														<!-- /Modal: Add new business -->
 
 														<!-- Main row -->
 															<div class="row">
@@ -474,8 +477,8 @@
 																					<div class="card-body flex-column">
 
 																						<!-- Card header -->
-																							<header class="px-4 py-2 bg-primary rounded d-flex justify-content-between">
-																								<div class="align-self-center">
+																							<header class="px-4 py-2 bg-primary rounded d-flex">
+																								<div class="flex-grow-1 align-self-center">
 																									<span class="text-white fw-bold">Empresas</span>
 																								</div>
 																								<div class="dropdown">
@@ -490,6 +493,9 @@
 																										<li><a class="dropdown-item" href="#">El a&ntilde;o pasado</a></li>
 																									</ul>
 																								</div>
+																								<button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#business_add_modal">
+																									<i class="fas fa-plus"></i>
+																								</button>
 																							</header>
 																						<!-- /Card header -->
 
